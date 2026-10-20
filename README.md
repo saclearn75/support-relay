@@ -129,6 +129,22 @@ Mention `@Support Lead` in the room; it should reply with an echo. Repeat with `
 
 Use a fresh second room to make the cross-session memory behavior obvious. Cognee data is local and persistent; it remains available across agent restarts until its local storage is removed.
 
+### Reset demo memory
+
+Before rerunning the demo from a clean slate, preview the Support Relay datasets that would be removed:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\reset_cognee_memory.py --dry-run
+```
+
+To remove **all** local datasets whose names start with `support_relay_`, run:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\reset_cognee_memory.py --yes
+```
+
+This command deletes only Support Relay's Cognee datasets; it does not remove unrelated Cognee memory, models, virtual environments, or configuration. To reset just one customer, use `--customer-id acme-labs --yes`. Without `--yes`, the script requires you to type `RESET` before it deletes anything.
+
 ## Repository map
 
 | Path | Purpose |
@@ -137,6 +153,7 @@ Use a fresh second room to make the cross-session memory behavior obvious. Cogne
 | `src-ts/band-echo.ts` | Band-only diagnostic runner. |
 | `prompts/` | Role-specific instructions and handoff boundaries. |
 | `scripts/cognee_memory.py` | Customer-scoped Cognee remember/recall bridge. |
+| `scripts/reset_cognee_memory.py` | Scoped, confirmable reset for demo memory. |
 | `demo/` | Synthetic tickets and the Ticket 001 diagnostic log. |
 | `agent_config.yaml.example`, `.env.example` | Safe configuration templates. |
 | `src/support_relay/` | Python reference implementation, not the default Windows path. |
