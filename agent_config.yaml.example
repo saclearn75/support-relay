@@ -1,0 +1,10 @@
+# Create two remote agents in Band Desktop / the Band web app, then copy this
+# file to agent_config.yaml and replace both placeholders for each identity.
+support_lead:
+  agent_id: "<support-lead-agent-id>"
+  api_key: "<support-lead-api-key>"
+
+technical_specialist:
+  agent_id: "<technical-specialist-agent-id>"
+  api_key: "<technical-specialist-api-key>"
+

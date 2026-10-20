@@ -1,0 +1,3 @@
+2026-10-20T18:02:11Z gateway request_id=req_0142 customer=acme-labs POST /v1/widgets -> 401
+2026-10-20T18:02:11Z auth request_id=req_0142 api_key_id=key_demo_2024_09 status=expired expired_at=2026-10-19T00:00:00Z
+2026-10-20T18:02:11Z api request_id=req_0142 rejected reason=invalid_api_key

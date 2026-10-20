@@ -1,0 +1,14 @@
+[project]
+name = "support-relay"
+version = "0.1.0"
+description = "Band-coordinated support agents with durable customer memory"
+requires-python = ">=3.11"
+dependencies = [
+    "band-sdk[codex]",
+    "cognee[gliner]>=1.6.5",
+    "python-dotenv>=1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+

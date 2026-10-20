@@ -1,0 +1,23 @@
+{
+  "name": "support-relay",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "band:lead": "tsx src-ts/band-agent.ts support_lead",
+    "band:specialist": "tsx src-ts/band-agent.ts technical_specialist",
+    "band:lead:echo": "tsx src-ts/band-echo.ts support_lead",
+    "band:specialist:echo": "tsx src-ts/band-echo.ts technical_specialist"
+  },
+  "dependencies": {
+    "@band-ai/sdk": "^0.6.0",
+    "@openai/codex-sdk": "^0.163.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
